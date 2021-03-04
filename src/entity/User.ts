@@ -1,9 +1,9 @@
-import { Entity, Column, PrimaryColumn, BeforeInsert } from "typeorm";
-import { v4 as uuidv4 } from "uuid";
+import {Entity, Column, PrimaryColumn, BeforeInsert, BaseEntity} from 'typeorm';
+import {v4 as uuidv4} from 'uuid';
 
-@Entity("users")
-export class User {
-    @PrimaryColumn("uuid")
+@Entity('users')
+export class User extends BaseEntity {
+    @PrimaryColumn('uuid')
     id: string;
 
     @Column()
@@ -12,7 +12,7 @@ export class User {
     @Column()
     email: string;
 
-    @Column("text")
+    @Column('text')
     password: string;
 
     @Column()
@@ -20,6 +20,6 @@ export class User {
 
     @BeforeInsert()
     addId() {
-        this.id = uuidv4();
+      this.id = uuidv4();
     }
 }

@@ -31,12 +31,14 @@ name?: string | null;
 
 interface IMutation {
 __typename: "Mutation";
-register: boolean | null;
+register: string | null;
 }
 
 interface IRegisterOnMutationArguments {
+name: string;
 email: string;
 password: string;
+age: number;
 }
 }
 
