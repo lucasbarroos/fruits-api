@@ -114,6 +114,36 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@gql2ts/from-query@^2.0.0-3":
+  version "2.0.0-4"
+  resolved "https://registry.yarnpkg.com/@gql2ts/from-query/-/from-query-2.0.0-4.tgz#1239556755aad55b8179ee091434b4499ae93279"
+  integrity sha512-0Brvp0pHr71FydFzuXnKbnLyRcSwEML8hJTgxSiqn+M1LSKffePkSLYf2aoQLx+l/LBtO9RvvrU2fgL/rFPPSg==
+  dependencies:
+    "@gql2ts/language-typescript" "^2.0.0-0"
+    "@gql2ts/util" "^2.0.0-0"
+
+"@gql2ts/from-schema@^2.0.0-0":
+  version "2.0.0-4"
+  resolved "https://registry.yarnpkg.com/@gql2ts/from-schema/-/from-schema-2.0.0-4.tgz#9927dd0d991e64101ad443cadee8c47f347f1db9"
+  integrity sha512-dx9OCgL5A6IiDecIFxKyfbpzCsEI6dbyCLlYwQU0dzr+L3IN0YkEIpNtPmO83W1MRZAi34G1AiKZBgbRcT0S9g==
+  dependencies:
+    "@gql2ts/language-typescript" "^2.0.0-0"
+    "@gql2ts/util" "^2.0.0-0"
+    dedent "^0.7.0"
+
+"@gql2ts/language-typescript@^2.0.0-0":
+  version "2.0.0-0"
+  resolved "https://registry.yarnpkg.com/@gql2ts/language-typescript/-/language-typescript-2.0.0-0.tgz#733c611a11a1061e7bedde679cd347b37c5cdbe0"
+  integrity sha512-7jxNsQutjQ5rUfOxNZuovUXFldIA5hhIjQh95aJLQIRYKBVDCIceM6QpCCbf1iuhwx4P23jx1kc/4uLsAJHnug==
+  dependencies:
+    "@gql2ts/util" "^2.0.0-0"
+    humps "^2.0.0"
+
+"@gql2ts/util@^2.0.0-0":
+  version "2.0.0-0"
+  resolved "https://registry.yarnpkg.com/@gql2ts/util/-/util-2.0.0-0.tgz#865599a661042b64da73a35e1d5d0cc52f72a976"
+  integrity sha512-lMUYZZtoo31klzenNvJ4cMYzFbs3T4peT7fSlCAq1EEthbIuXFtrY8aFIa2Y5BdrnhoHFYDgdlYbr3xJ0j1teA==
+
 "@graphql-toolkit/code-file-loader@0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@graphql-toolkit/code-file-loader/-/code-file-loader-0.10.3.tgz#17a2f8206a82c3e786588c1b03a0a6ef30bb7997"
@@ -868,6 +898,11 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@^2.9.0:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -975,6 +1010,11 @@ decompress-response@^3.3.0:
   integrity sha1-gKTdMjdIOEv6JICDYirt7Jgq3/M=
   dependencies:
     mimic-response "^1.0.0"
+
+dedent@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
+  integrity sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
 
 deep-extend@^0.6.0:
   version "0.6.0"
@@ -1337,6 +1377,17 @@ got@^9.6.0:
     to-readable-stream "^1.0.0"
     url-parse-lax "^3.0.0"
 
+gql2ts@^2.0.0-0:
+  version "2.0.0-3"
+  resolved "https://registry.yarnpkg.com/gql2ts/-/gql2ts-2.0.0-3.tgz#3929e1aa4930311b41660785276007392bde86cf"
+  integrity sha512-fUcgVgkMYDKTwFULp00r6KA/ZFQ2H5hf2lMIXxZ3BEuODiNPhGn2v5B7jNI7PJUfcEP3v3rn01AECwo5mWZdYg==
+  dependencies:
+    "@gql2ts/from-query" "^2.0.0-3"
+    "@gql2ts/from-schema" "^2.0.0-0"
+    "@gql2ts/util" "^2.0.0-0"
+    commander "^2.9.0"
+    graphql ">= 0.10 <15"
+
 graceful-fs@^4.1.2:
   version "4.2.6"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
@@ -1476,7 +1527,7 @@ graphql@*:
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
   integrity sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
 
-"graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0":
+"graphql@>= 0.10 <15", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0":
   version "14.7.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.7.0.tgz#7fa79a80a69be4a31c27dda824dc04dac2035a72"
   integrity sha512-l0xWZpoPKpppFzMfvVyFmp9vLN7w/ZZJPefUicMCepfJeQ8sMcztloGYY9DfjVPo6tIUDzU5Hw3MUbIjj9AVVA==
@@ -1552,6 +1603,11 @@ http-errors@~1.7.2:
     setprototypeof "1.1.1"
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
+
+humps@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
 iconv-lite@0.4.24:
   version "0.4.24"
