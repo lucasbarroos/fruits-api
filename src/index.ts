@@ -13,11 +13,7 @@ const schemaWithResolvers = addResolversToSchema({
   resolvers,
 });
 
-export const startServer = async () => {
-  const server = new GraphQLServer({schema: schemaWithResolvers});
-  await createConnection();
-  await server.start();
-  console.log('Server is running on localhost:4000');
-};
-
-startServer();
+const server = new GraphQLServer({schema: schemaWithResolvers});
+createConnection().then(() => {
+  server.start(() => console.log('Server is running on localhost:4000'));
+});

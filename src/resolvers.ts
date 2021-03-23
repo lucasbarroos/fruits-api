@@ -17,8 +17,7 @@ export const resolvers: ResolverMap = {
       });
 
       await user.save();
-
-      return {user, message: 'User registered.'};
+      return `Welcome new user!\nName: ${name}\nAge: ${age}\nEmail: ${email}\nPassword: ${password}`;
     },
   },
 };

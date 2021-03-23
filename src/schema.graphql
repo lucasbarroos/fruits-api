@@ -1,9 +1,7 @@
-// importar as interfaces aqui ou passar esses arquivos pra outra pasta
 type Query {
   hello(name: String): String!
 }
 
-
 type Mutation {
-  register(name: String!, email: String!, password: String!, age: Int!): IRegisterResponse
+  register(name: String!, email: String!, password: String!, age: Int!): String
 }
